@@ -1,0 +1,32 @@
+.btn {
+  @include btn-reset;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-icon {
+  & svg {
+    margin-right: 12px;
+  }
+
+  &--reverse {
+    & svg {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+}
+
+.btn-primary {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: #4f4325;
+  box-shadow: inset 14px -14px 26px 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(180deg, #ffefb6 0%, #ffd648 100%);
+  border-radius: 300px;
+  padding: 35px;
+}

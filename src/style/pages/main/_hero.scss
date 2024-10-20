@@ -1,0 +1,68 @@
+.hero {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.55) 55%, #fff 100%),
+    url('../img/bg-hero.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 180px;
+
+  @include media-min ($xl) {
+    padding-top: 140px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.6em;
+    text-align: center;
+    color: rgba(75, 75, 75, 0.78);
+    display: none;
+
+    @include media-min ($lg) {
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 69px;
+    line-height: .8;
+    text-align: center;
+    color: #184065;
+    font-family: $second-font,
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    @include media-min ($lg) {
+      font-size: 117px;
+      font-family: $third-font,
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+  }
+}
+
+.hero-benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+
+
+  &__left {}
+
+  &__middle {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__btn {
+    margin-bottom: 24px;
+  }
+
+  &__note {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(24, 64, 101, 0.5);
+  }
+}

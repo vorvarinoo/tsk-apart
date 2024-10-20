@@ -1,0 +1,112 @@
+.header {
+  padding: 32px 0;
+
+  width: 100%;
+  position: fixed;
+
+  &__cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    row-gap: 36px;
+
+    @include media-min ($md) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @include media-min ($xl) {
+      flex: 1 100%;
+      margin-right: 100px;
+    }
+  }
+
+  &__left,
+  &__middle {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--dark-gray-color);
+    max-width: 190px;
+  }
+
+  &__whatsapp {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--dark-gray-color);
+    display: none;
+    align-items: center;
+
+    @include media-min ($xl) {
+      display: flex;
+    }
+
+    & > a {
+      position: relative;
+      overflow: hidden;
+      width: 45px;
+      height: 45px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--white-color);
+      margin-right: 20px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+      }
+
+      & svg {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__phone {
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--dark-gray-color);
+    display: none;
+    flex-shrink: 0;
+
+    @include media-min ($xl) {
+      display: grid;
+    }
+
+    &::after {
+      content: 'Звоните, мы сейчас работаем';
+      font-weight: 500;
+      font-size: 14px;
+      color: rgba(24, 64, 101, 0.5);
+      position: relative;
+      left: -4px;
+    }
+  }
+
+}
+
+
+.logo {
+  margin-right: 48px;
+  flex-shrink: 0;
+}
