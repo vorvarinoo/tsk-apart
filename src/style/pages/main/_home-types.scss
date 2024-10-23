@@ -1,0 +1,33 @@
+.home-types {
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    @include media-min ($xl) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    max-width: 200px;
+
+    @include media-min ($xl) {
+      margin-left: 44px;
+      max-width: 300px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 90px;
+
+    @include media-min ($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 70px;
+      row-gap: 114px;
+    }
+  }
+
+
+}

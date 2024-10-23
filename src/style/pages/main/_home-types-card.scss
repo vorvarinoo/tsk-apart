@@ -1,0 +1,81 @@
+.home-types-card {
+  position: relative;
+  padding-top: 78%;
+
+  @include media-min ($md) {
+    padding-top: 54%;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 270px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 92%;
+    border-radius: 30px;
+    background-image: var(--home-types-card-img, transparent);
+    background-color: var(--dark-gray-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+    @include media-min ($md) {
+      padding-top: 60%;
+    }
+
+    @include media-min ($xl) {
+      padding-top: 332px;
+    }
+  }
+
+  &__img {
+    border-radius: 30px;
+    overflow: hidden;
+    display: inline-flex;
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 1;
+    display: flex;
+
+    @include media-min ($xl) {
+      padding: 0 28px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    padding: 0;
+
+
+    @include media-min ($xl) {
+      padding: 30px 18px;
+    }
+  }
+
+  &__title {
+    @include indent-reset;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--dark-gray-color);
+  }
+
+  &__descr {
+    display: grid;
+    row-gap: 16px;
+    padding: 36px 24px;
+    margin-bottom: 32px;
+
+    @include media-min ($xl) {
+      padding: 0;
+    }
+  }
+}

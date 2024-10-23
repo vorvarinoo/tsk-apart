@@ -11,3 +11,43 @@ body {
 a {
   text-decoration-color: var(--link-line, transparent);
 }
+
+b,
+stop {
+  font-weight: 600;
+}
+
+.text {
+  color: var(--dark-gray-color);
+}
+
+.text-sm {
+  font-size: 16px;
+}
+
+.text-md {
+  font-size: 18px;
+}
+
+
+.title {
+  @include indent-reset;
+
+  font-family: $second-font,
+    Arial,
+    Helvetica,
+    sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+
+
+.title-lg {
+  color: var(--blue-color);
+  font-size: 40px;
+  text-transform: uppercase;
+
+  @include media-min ($xl) {
+    font-size: 50px;
+  }
+}
