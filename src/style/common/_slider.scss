@@ -13,24 +13,71 @@
   }
 }
 
+.slider-controls {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 34px;
+  pointer-events: none;
+
+  @include media-min ($xl) {
+    top: 60%;
+    transform: translate(-52%, -50%);
+  }
+
+}
+
 .slider-control {
-  color: var(--white-color);
-  background-color: var(--black-color);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  color: var(--slider-control-color, var(--white-color));
+  background-color: transparent;
+  border-radius: 100%;
+  border: 1px solid var(--slider-control-border-color, var(--white-color));
+  width: 52px;
+  height: 52px;
   pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
   &.swiper-button-lock {
     display: none;
   }
 
   & svg {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
+
+    @include media-min ($lg) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   @include media-min ($xl) {
     transition: background-color 0.2s ease-in-out;
+  }
+}
+
+.swiper-pagination {
+  --swiper-pagination-bullet-size: 11px;
+  --swiper-pagination-color: #209b1e;
+  --swiper-pagination-bullet-inactive-color: var(--white-color);
+  --swiper-pagination-bullet-inactive-opacity: .3;
+
+  bottom: 90px !important;
+
+  @include media-min ($md) {
+    bottom: 104px !important;
+  }
+
+  @include media-min ($xl) {
+    display: none;
   }
 }

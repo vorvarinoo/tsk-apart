@@ -1,0 +1,75 @@
+.quiz-block {
+  position: relative;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 82px;
+
+    @include media-min ($xl) {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__title {
+    max-width: 450px;
+  }
+
+  &__cont {
+    position: relative;
+  }
+
+  &__estimates {
+    padding: 20px 0 0 160px;
+    position: absolute;
+    top: -78px;
+    right: 0;
+
+    @include media-min ($lg) {
+      top: -135px;
+      padding: 58px 0 0 270px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url('../img/quiz-block-estimates.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 181px;
+      height: 223px;
+
+      @include media-min ($lg) {
+        width: 280px;
+        height: 345px;
+      }
+    }
+  }
+
+
+  &__text {
+    max-width: 265px;
+    display: grid;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(75, 75, 75, 0.5);
+
+    @include media-min ($lg) {
+      font-size: 24px;
+    }
+
+    & span {
+      font-weight: 600;
+      color: #4b4b4b;
+    }
+  }
+
+  &__quiz {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    position: relative;
+  }
+}

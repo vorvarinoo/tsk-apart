@@ -1,3 +1,11 @@
 @include('hero.html')
-@include('home-types.html')
-@include('about.html')
+<div class="site-background site-background--top">
+  @include('house.html')
+  @include('quiz-block.html')
+  @include('home-types.html')
+</div>
+<div class="site-background">
+  @include('about.html')
+  @include('benefits.html')
+</div>
+@include('feedback.html')

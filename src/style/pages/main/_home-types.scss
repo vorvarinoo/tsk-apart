@@ -13,7 +13,6 @@
     max-width: 200px;
 
     @include media-min ($xl) {
-      margin-left: 44px;
       max-width: 300px;
     }
   }
@@ -22,7 +21,8 @@
     display: grid;
     row-gap: 90px;
 
-    @include media-min ($lg) {
+
+    @include media-min ($md) {
       grid-template-columns: repeat(2, 1fr);
       column-gap: 70px;
       row-gap: 114px;

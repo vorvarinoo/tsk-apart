@@ -1,4 +1,102 @@
-<footer class="site__footer">
+<footer class="site__footer footer">
+  <div class="container">
+    <div class="footer__map">
+
+      <script type="text/javascript"
+              charset="utf-8"
+              async
+              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adda48728b6c9d27af5b1fa8c649eb6cc873e2a3c670b5cd2a6a4abe5754e7c22&amp;width=100%25&amp;height=462&amp;lang=ru_RU&amp;scroll=true"></script>
+
+    </div>
+
+    <div class="footer__cont">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <img src="img/logo.png"
+               alt="">
+        </div>
+
+        <div class="footer__top-cont">
+          <div class="footer__company">
+            Торгово-Строительная Компания АПАРТ
+          </div>
+          <div class="footer__info">
+            <div>ИНН 9721179625</div>
+            <div>ОГРН 1227700620047</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__middle">
+
+        <div class="footer__phone">
+
+          <div class="site-icon site-icon--sm">
+            <svg width="24"
+                 height="30"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+          </div>
+
+          <div class="footer__phone-cont">
+            <a href="tel:">8 (916) 973-34-75</a>
+            <span>Звоните, мы сейчас работаем</span>
+          </div>
+
+        </div>
+
+        <div class="footer__adress">
+
+          <div class="site-icon site-icon--sm">
+            <svg width="24"
+                 height="30"
+                 aria-hidden="true">
+              <use xlink:href="img/sprite.svg#map"></use>
+            </svg>
+          </div>
+
+          <span>
+            Москва, ул. Марксистская дом 34 корп. 7, офис №300
+          </span>
+
+        </div>
+
+        <div class="footer__privacy">
+          <a href="">
+            Политика конфиденциальности
+          </a>
+
+          <a href="">
+            Согласие на обработку персональных данных
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__info">
+          <div>ИНН 9721179625</div>
+          <div>ОГРН 1227700620047</div>
+        </div>
+        <div class="footer__whatsapp">
+          <a href="">
+            <span>
+              <svg width="21"
+                   height="21"
+                   aria-hidden="true">
+                <use xlink:href="img/sprite.svg#footer-whatsapp"></use>
+              </svg>
+            </span>
+            Написать нам
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
 </footer>
-@include('../common/scroll-top.html')
+@include('../common/fixed-scroll.html')
 @include('../modal/index.html')

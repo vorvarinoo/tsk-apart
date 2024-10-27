@@ -2,9 +2,8 @@
   position: relative;
   z-index: 3;
   padding: 32px 0;
-
   width: 100%;
-  position: fixed;
+  position: absolute;
 
   &__cont {
     display: flex;
@@ -43,7 +42,7 @@
     max-width: 190px;
   }
 
-  &__whatsapp {
+  &__whatsapp-link {
     font-weight: 500;
     font-size: 14px;
     color: var(--dark-gray-color);

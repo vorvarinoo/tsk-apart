@@ -1,0 +1,200 @@
+.footer {
+  padding: 25px 0 34px;
+
+  @include media-min ($md) {
+    padding-top: 42px;
+  }
+
+  &__map {
+    overflow: hidden;
+    border-radius: 60px;
+    margin-bottom: 34px;
+    filter: grayscale(100%);
+  }
+
+  &__cont {
+    @include media-min ($md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__top {
+    display: flex;
+    margin-bottom: 24px;
+
+    @include media-min ($md) {
+      margin-bottom: 0;
+    }
+
+    @include media-min ($lg) {
+      flex: 1 100%;
+    }
+
+    @include media-min ($xl) {
+      flex: 1 50%;
+    }
+  }
+
+  &__logo {
+    margin-right: 23px;
+  }
+
+  &__company {
+    max-width: 230px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #184065;
+
+
+    @include media-min ($md) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__info {
+    display: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(75, 75, 75, 0.5);
+
+    @include media-min ($md) {
+      display: block;
+    }
+  }
+
+  &__middle {
+    margin-bottom: 34px;
+    display: grid;
+
+    @include media-min ($md) {
+      margin-bottom: 0;
+    }
+
+    @include media-min ($lg) {
+      row-gap: 16px;
+      flex: 1 100%;
+    }
+
+    @include media-min ($xl) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__adress,
+  &__phone {
+    display: flex;
+    align-items: center;
+
+    @include media-min ($xl) {
+      flex: 1 50%;
+    }
+  }
+
+  &__adress {
+    margin-bottom: 20px;
+
+    & span {
+      font-weight: 500;
+      font-size: 14px;
+      color: #184065;
+      max-width: 232px;
+    }
+
+    @include media-min ($lg) {
+      order: -1;
+      margin-bottom: 0;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 34px;
+
+    @include media-min ($lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__phone-cont {
+    display: grid;
+
+    & a {
+      font-weight: 600;
+      font-size: 37px;
+      color: #184065;
+    }
+
+    & span {
+      font-weight: 500;
+      font-size: 14px;
+      color: rgba(75, 75, 75, 0.5);
+    }
+  }
+
+  & .site-icon {
+    display: flex;
+    margin-right: 23px;
+  }
+
+  &__privacy {
+    display: grid;
+    row-gap: 16px;
+
+    @include media-min ($xl) {
+      flex: 1 100%;
+    }
+
+    & a {
+      font-weight: 500;
+      font-size: 14px;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+      color: rgba(75, 75, 75, 0.5);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    column-gap: 30px;
+
+    @include media-min ($md) {
+      display: none;
+    }
+
+    & .footer__info {
+      display: block;
+
+      @include media-min ($md) {
+        display: none;
+      }
+    }
+  }
+
+  &__whatsapp {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    & a {
+      font-weight: 600;
+      font-size: 16px;
+      color: #184065;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 100%;
+      border: 1px solid rgba(24, 64, 101, 0.13);
+      backdrop-filter: blur(10px);
+      margin-right: 20px;
+    }
+  }
+}

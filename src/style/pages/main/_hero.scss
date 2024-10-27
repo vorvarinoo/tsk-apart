@@ -1,11 +1,10 @@
 .hero {
   overflow: hidden;
   position: relative;
-  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0.55) 55%, #fff 100%),
-    url('../img/bg-hero.png');
+  background-image: url('../img/bg-hero.png');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 100% 870px;
+  background-position: center 0;
   padding-top: 180px;
 
   @include media-min ($xl) {
@@ -69,6 +68,44 @@
         top: 38px;
         background-position: center;
       }
+    }
+  }
+
+  &__birds {
+    position: absolute;
+    top: -260px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include media-min ($lg) {
+      top: -120px;
+    }
+  }
+
+  &__birds-left {
+    width: 71px;
+    height: 50px;
+
+    @include media-min ($lg) {
+      width: 86px;
+      height: 60px;
+    }
+  }
+
+  &__birds-right {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    width: 68px;
+    height: 68px;
+
+    @include media-min ($lg) {
+      top: -30px;
+      right: -20px;
+      width: 102px;
+      height: 103px;
+
     }
   }
 

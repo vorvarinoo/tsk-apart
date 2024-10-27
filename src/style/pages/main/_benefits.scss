@@ -1,0 +1,225 @@
+.benefits {
+  padding-top: 44px;
+
+  @include media-min ($xl) {
+    padding-top: 0;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+
+    @include media-min ($xl) {
+      margin: 0 auto;
+      max-width: 640px;
+      margin-bottom: 56px;
+      text-align: center;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    row-gap: 38px;
+    column-gap: 32px;
+
+    @include media-min ($xl) {
+      grid-template-columns: .64fr 1fr .64fr;
+    }
+  }
+
+  &__middle {
+    --benefits-car-title-color: var(--dark-gray-color);
+    --benefits-car-text-color: rgba(75, 75, 75, 0.5);
+    order: 1;
+    background-image: url('../img/benefits-middle-bg-mobile.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+
+    @include media-min ($xl) {
+      order: 0;
+      background-image: url('../img/benefits-middle-bg-desktop.png');
+      padding-top: 20px;
+    }
+
+    & .benefits-card {
+      padding: 40px 24px 0;
+      max-width: 400px;
+      margin: 0 auto;
+
+      &__descr {
+        margin: 0;
+        padding-left: 8px;
+        margin-bottom: 16px;
+
+        @include media-min ($xl) {
+          max-width: 232px;
+        }
+      }
+
+      &__btn {
+        position: relative;
+        width: 100%;
+
+        @include media-min ($xl) {}
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        right: 0;
+        backdrop-filter: blur(10px);
+        background: #f9f9f9;
+        border-radius: 30px;
+        margin-bottom: 34px;
+      }
+    }
+  }
+
+  &__middle-inner {
+    padding: 370px 0 88px;
+    background-image: url('../img/benefits-person.png');
+    background-repeat: no-repeat;
+    background-size: 400px 510px;
+    background-position: center top;
+
+    @include media-min ($xl) {
+      padding: 370px 61px 88px;
+    }
+  }
+
+  &__top,
+  &__bottom {
+    display: grid;
+    row-gap: 38px;
+
+    & .benefits-card {
+      min-height: 298px;
+      padding: 191px 44px 27px 38px;
+      backdrop-filter: blur(10px);
+      background: radial-gradient(57.62% 57.49% at 38.73% 43.62%, rgb(81, 93, 104) 0%, rgb(55, 67, 78) 100%);
+      overflow: hidden;
+      border: 1px solid var(--white-color);
+      border-radius: 30px;
+    }
+
+    @include media-min ($xl) {
+      row-gap: 22px;
+      padding-bottom: 117px;
+    }
+  }
+}
+
+.benefits-card {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &--estimates {
+    &::before {
+      background-image: url('../img/benefits-card-estimates-1.png');
+      width: 200px;
+      height: 285px;
+    }
+
+    &::after {
+      background-image: url('../img/benefits-card-estimates-2.png');
+      width: 155px;
+      height: 205px;
+    }
+
+    & .benefits-card__text {
+      max-width: 165px;
+    }
+  }
+
+  &--guarantee {
+    &::before {
+      background-image: url('../img/benefits-card-guarantee-1.png');
+      width: 114px;
+      height: 163px;
+    }
+
+    &::after {
+      background-image: url('../img/benefits-card-guarantee-2.png');
+      width: 140px;
+      height: 134px;
+    }
+
+    & .benefits-card__text {
+      max-width: 194px;
+    }
+  }
+
+  &--photoreport {
+    &::before {
+      background-image: url('../img/benefits-card-photoreport-1.png');
+      width: 146px;
+      height: 232px;
+    }
+
+    &::after {
+      background-image: url('../img/benefits-card-photoreport-2.png');
+      width: 192px;
+      height: 208px;
+    }
+
+    & .benefits-card__text {
+      max-width: 165px;
+    }
+  }
+
+  &--materials {
+    &::before {
+      background-image: url('../img/benefits-card-materials-1.png');
+      width: 205px;
+      height: 194px;
+    }
+
+    &::after {
+      background-image: url('../img/benefits-card-materials-2.png');
+      width: 176px;
+      height: 202px;
+    }
+
+    & .benefits-card__text {
+      max-width: 213px;
+    }
+  }
+
+
+  &__descr {
+    position: relative;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--benefits-car-title-color, var(--white-color));
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--benefits-car-text-color, rgba(255, 255, 255, 0.5));
+  }
+}

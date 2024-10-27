@@ -1,7 +1,6 @@
 .about {
   padding: 40px 0 0;
   overflow: hidden;
-  background-color: #000;
 
   @include media-min ($xl) {
     padding: 100px 0;
@@ -10,13 +9,17 @@
   &__cont {
     display: grid;
 
+    @include media-min ($md) {
+      justify-items: flex-start;
+    }
+
     @include media-min ($xl) {
       grid-template-columns: 1fr .9fr;
       grid-template-rows: repeat(3, auto);
     }
   }
 
-  &__info {
+  &__info-block {
     --text-color: rgba(75, 75, 75, 0.7);
 
     margin-bottom: 30px;
@@ -107,7 +110,6 @@
       @include media-min ($xl) {
         top: 0;
         background-image: url('../img/bg-about-xl.png');
-
         background-size: 100% 100%;
         width: 100%;
         height: 100%;
@@ -128,6 +130,13 @@
     bottom: -70px;
     left: 49%;
     transform: translateX(-50%);
+    pointer-events: none;
+    display: none;
+
+    @include media-min ($xl) {
+      pointer-events: auto;
+      display: block;
+    }
 
     &::before {
       content: '';
